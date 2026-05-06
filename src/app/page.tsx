@@ -70,18 +70,20 @@ export default function Home() {
         {screen === "landing" ? (
           <motion.div
             key="landing"
-            initial={{ opacity: 0, y: 28, filter: "blur(18px)" }}
+            initial={{ opacity: 0, y: 28, scale: 0.985, filter: "blur(18px)" }}
             animate={{
               opacity: 1,
               y: 0,
+              scale: 1,
               filter: "blur(0px)",
-              transition: { duration: 0.65 },
+              transition: { duration: 0.7, ease: "easeOut" },
             }}
             exit={{
               opacity: 0,
               y: -20,
+              scale: 1.015,
               filter: "blur(14px)",
-              transition: { duration: 0.35 },
+              transition: { duration: 0.4, ease: "easeIn" },
             }}
             className="min-h-screen"
           >
@@ -92,18 +94,20 @@ export default function Home() {
         {screen === "selection" ? (
           <motion.div
             key="selection"
-            initial={{ opacity: 0, y: 28, filter: "blur(18px)" }}
+            initial={{ opacity: 0, y: 28, scale: 0.985, filter: "blur(18px)" }}
             animate={{
               opacity: 1,
               y: 0,
+              scale: 1,
               filter: "blur(0px)",
-              transition: { duration: 0.65 },
+              transition: { duration: 0.7, ease: "easeOut" },
             }}
             exit={{
               opacity: 0,
               y: -20,
+              scale: 1.015,
               filter: "blur(14px)",
-              transition: { duration: 0.35 },
+              transition: { duration: 0.4, ease: "easeIn" },
             }}
             className="min-h-screen"
           >
@@ -119,18 +123,20 @@ export default function Home() {
         {screen === "result" ? (
           <motion.div
             key="result"
-            initial={{ opacity: 0, y: 28, filter: "blur(18px)" }}
+            initial={{ opacity: 0, y: 28, scale: 0.985, filter: "blur(18px)" }}
             animate={{
               opacity: 1,
               y: 0,
+              scale: 1,
               filter: "blur(0px)",
-              transition: { duration: 0.65 },
+              transition: { duration: 0.7, ease: "easeOut" },
             }}
             exit={{
               opacity: 0,
               y: -20,
+              scale: 1.015,
               filter: "blur(14px)",
-              transition: { duration: 0.35 },
+              transition: { duration: 0.4, ease: "easeIn" },
             }}
             className="min-h-screen"
           >

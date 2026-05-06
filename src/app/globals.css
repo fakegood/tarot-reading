@@ -138,6 +138,15 @@
   }
 }
 
+@keyframes drift-marquee-seamless {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(calc(-100% / 3), 0, 0);
+  }
+}
+
 @keyframes pulse-star {
   0%,
   100% {
