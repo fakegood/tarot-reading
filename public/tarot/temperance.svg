@@ -1,0 +1,18 @@
+<svg width="420" height="560" viewBox="0 0 420 560" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="420" height="560" rx="32" fill="#0E1433"/>
+  <rect x="18" y="18" width="384" height="524" rx="24" stroke="#C9F5F1" stroke-opacity="0.42" stroke-width="2"/>
+  <rect x="40" y="40" width="340" height="480" rx="20" fill="url(#bg)"/>
+  <path d="M156 168C156 138.177 180.177 114 210 114C239.823 114 264 138.177 264 168C264 197.823 239.823 222 210 222C180.177 222 156 197.823 156 168Z" fill="#B6F6F0" fill-opacity="0.2"/>
+  <path d="M150 308C182 284 238 284 270 308V394H150V308Z" stroke="#FFF0B8" stroke-width="8" stroke-linejoin="round"/>
+  <path d="M184 246L164 316" stroke="#B6F6F0" stroke-width="8" stroke-linecap="round"/>
+  <path d="M236 246L256 316" stroke="#B6F6F0" stroke-width="8" stroke-linecap="round"/>
+  <path d="M184 246H236" stroke="#FFF0B8" stroke-width="8" stroke-linecap="round"/>
+  <path d="M174 338C194 354 226 354 246 338" stroke="#B6F6F0" stroke-width="8" stroke-linecap="round"/>
+  <text x="210" y="476" text-anchor="middle" fill="#F8F2DE" font-size="34" font-family="Georgia, serif">Temperance</text>
+  <defs>
+    <linearGradient id="bg" x1="210" y1="40" x2="210" y2="520" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#24536E"/>
+      <stop offset="1" stop-color="#10172E"/>
+    </linearGradient>
+  </defs>
+</svg>

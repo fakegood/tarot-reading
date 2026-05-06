@@ -1,0 +1,19 @@
+<svg width="420" height="560" viewBox="0 0 420 560" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="420" height="560" rx="32" fill="#131234"/>
+  <rect x="18" y="18" width="384" height="524" rx="24" stroke="#FFE6A2" stroke-opacity="0.42" stroke-width="2"/>
+  <rect x="40" y="40" width="340" height="480" rx="20" fill="url(#bg)"/>
+  <circle cx="210" cy="236" r="104" stroke="#FFE6A2" stroke-width="10"/>
+  <circle cx="210" cy="236" r="56" stroke="#BFEFFF" stroke-width="8"/>
+  <path d="M210 132V340" stroke="#D5C8FF" stroke-width="8" stroke-linecap="round"/>
+  <path d="M106 236H314" stroke="#D5C8FF" stroke-width="8" stroke-linecap="round"/>
+  <path d="M136.46 162.46L283.54 309.54" stroke="#FFE6A2" stroke-width="8" stroke-linecap="round"/>
+  <path d="M283.54 162.46L136.46 309.54" stroke="#FFE6A2" stroke-width="8" stroke-linecap="round"/>
+  <circle cx="210" cy="236" r="16" fill="#FFF4CA"/>
+  <text x="210" y="476" text-anchor="middle" fill="#F8F2DE" font-size="30" font-family="Georgia, serif">Wheel of Fortune</text>
+  <defs>
+    <linearGradient id="bg" x1="210" y1="40" x2="210" y2="520" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#364A86"/>
+      <stop offset="1" stop-color="#13162E"/>
+    </linearGradient>
+  </defs>
+</svg>

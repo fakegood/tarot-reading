@@ -1,0 +1,17 @@
+<svg width="420" height="560" viewBox="0 0 420 560" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="420" height="560" rx="32" fill="#0E1132"/>
+  <rect x="18" y="18" width="384" height="524" rx="24" stroke="#D1C5FF" stroke-opacity="0.45" stroke-width="2"/>
+  <rect x="40" y="40" width="340" height="480" rx="20" fill="url(#bg)"/>
+  <circle cx="210" cy="156" r="74" fill="#CABEFF" fill-opacity="0.16"/>
+  <circle cx="210" cy="154" r="32" stroke="#FFF0B8" stroke-width="8"/>
+  <path d="M144 338C167 306 192 290 210 290C228 290 253 306 276 338V394H144V338Z" stroke="#BFEFFF" stroke-width="8" stroke-linejoin="round"/>
+  <path d="M210 224V288" stroke="#FFF0B8" stroke-width="8" stroke-linecap="round"/>
+  <path d="M170 254H250" stroke="#FFF0B8" stroke-width="8" stroke-linecap="round"/>
+  <text x="210" y="468" text-anchor="middle" fill="#F8F2DE" font-size="30" font-family="Georgia, serif">High Priestess</text>
+  <defs>
+    <linearGradient id="bg" x1="210" y1="40" x2="210" y2="520" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#303D7E"/>
+      <stop offset="1" stop-color="#11162E"/>
+    </linearGradient>
+  </defs>
+</svg>

@@ -1,0 +1,18 @@
+<svg width="420" height="560" viewBox="0 0 420 560" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="420" height="560" rx="32" fill="#0B102B"/>
+  <rect x="18" y="18" width="384" height="524" rx="24" stroke="#D5C6FF" stroke-opacity="0.4" stroke-width="2"/>
+  <rect x="40" y="40" width="340" height="480" rx="20" fill="url(#bg)"/>
+  <circle cx="210" cy="172" r="88" fill="#B7ABFF" fill-opacity="0.15"/>
+  <path d="M244 120C229.5 131.5 222 149.5 222 170C222 201.48 247.52 227 279 227C289.354 227 299.063 224.242 307.428 219.42C297.224 243.544 274.726 260.5 248.268 260.5C212.621 260.5 183.724 231.604 183.724 195.956C183.724 161.498 210.739 133.349 244 120Z" fill="#FFF0B8"/>
+  <path d="M136 402C161 348 195 321 210 320C225 321 259 348 284 402" stroke="#8CE9FF" stroke-width="8" stroke-linecap="round"/>
+  <circle cx="156" cy="278" r="10" fill="#FFF0B8"/>
+  <circle cx="262" cy="302" r="16" fill="#8CE9FF"/>
+  <circle cx="212" cy="354" r="11" fill="#D7C8FF"/>
+  <text x="210" y="476" text-anchor="middle" fill="#F8F2DE" font-size="36" font-family="Georgia, serif">The Moon</text>
+  <defs>
+    <linearGradient id="bg" x1="210" y1="40" x2="210" y2="520" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#1B2A63"/>
+      <stop offset="1" stop-color="#0B1024"/>
+    </linearGradient>
+  </defs>
+</svg>

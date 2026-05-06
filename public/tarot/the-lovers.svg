@@ -1,0 +1,17 @@
+<svg width="420" height="560" viewBox="0 0 420 560" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="420" height="560" rx="32" fill="#221131"/>
+  <rect x="18" y="18" width="384" height="524" rx="24" stroke="#FFD0DC" stroke-opacity="0.45" stroke-width="2"/>
+  <rect x="40" y="40" width="340" height="480" rx="20" fill="url(#bg)"/>
+  <circle cx="168" cy="190" r="48" fill="#FFC4D7" fill-opacity="0.7"/>
+  <circle cx="252" cy="190" r="48" fill="#C5B5FF" fill-opacity="0.7"/>
+  <path d="M210 286C240 250 288 250 318 286C318 342 210 390 210 390C210 390 102 342 102 286C132 250 180 250 210 286Z" fill="#FFE8B0"/>
+  <path d="M142 126L168 98L194 126" stroke="#FFF4CA" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M226 126L252 98L278 126" stroke="#FFF4CA" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="210" y="476" text-anchor="middle" fill="#F8F2DE" font-size="36" font-family="Georgia, serif">The Lovers</text>
+  <defs>
+    <linearGradient id="bg" x1="210" y1="40" x2="210" y2="520" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#73325A"/>
+      <stop offset="1" stop-color="#281529"/>
+    </linearGradient>
+  </defs>
+</svg>
