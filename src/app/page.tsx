@@ -15,16 +15,13 @@ export default function Home() {
   const [screen, setScreen] = useState<Screen>("landing");
   const [selectedIds, setSelectedIds] = useState<string[]>([]);
 
-  const selectedCards = useMemo<TarotCardData[]>(
-    () =>
-      selectedIds
-        .map((id) => tarotCards.find((card) => card.id === id))
-        .filter((card): card is TarotCardData => Boolean(card)),
+  const selectedCard = useMemo<TarotCardData | null>(
+    () => tarotCards.find((card) => card.id === selectedIds[0]) ?? null,
     [selectedIds]
   );
 
   useEffect(() => {
-    if (selectedIds.length !== 3) {
+    if (selectedIds.length !== 1) {
       return;
     }
 
@@ -41,17 +38,7 @@ export default function Home() {
   };
 
   const handleToggleCard = (cardId: string) => {
-    setSelectedIds((current) => {
-      if (current.includes(cardId)) {
-        return current.filter((id) => id !== cardId);
-      }
-
-      if (current.length >= 3) {
-        return current;
-      }
-
-      return [...current, cardId];
-    });
+    setSelectedIds([cardId]);
   };
 
   const handleRetry = () => {
@@ -141,7 +128,7 @@ export default function Home() {
             className="min-h-screen"
           >
             <ResultScreen
-              cards={selectedCards}
+              card={selectedCard}
               onRetry={handleRetry}
               onBackToLanding={handleBackToLanding}
             />

@@ -36,9 +36,9 @@ export function LandingScreen({ onStart }: LandingScreenProps) {
                   </span>
                 </h1>
                 <p className="max-w-2xl text-base leading-8 text-slate-200/78 sm:text-lg">
-                  Choose three cards and uncover a short message shaped by hope,
-                  intuition, and timing. The entire reading lives here in a
-                  single luminous moment.
+                  Draw one card from the full deck and let a single symbol speak
+                  clearly. The entire reading stays quiet, immediate, and
+                  self-contained.
                 </p>
               </div>
 
@@ -52,7 +52,7 @@ export function LandingScreen({ onStart }: LandingScreenProps) {
                 </Button>
                 <div className="inline-flex items-center gap-2 text-sm text-slate-300/80">
                   <Sparkles className="size-4 text-cyan-200" />
-                  No accounts. No waiting. Just a quiet ritual.
+                  One draw. No accounts. Just a quiet ritual.
                 </div>
               </div>
             </div>
@@ -61,7 +61,7 @@ export function LandingScreen({ onStart }: LandingScreenProps) {
               <div className="absolute inset-6 rounded-full bg-cyan-200/10 blur-3xl" />
               <div className="glass-panel relative w-full rounded-[2rem] border border-white/12 p-6">
                 <div className="grid grid-cols-2 gap-4">
-                  {["Past", "Present", "Future", "Guidance"].map((label, index) => (
+                  {["Draw", "Reveal", "Meaning", "Return"].map((label, index) => (
                     <motion.div
                       key={label}
                       initial={{ opacity: 0, y: 18 }}

@@ -43,9 +43,9 @@ export function CardSelectionScreen({
               layout
               className="flex items-center gap-3 self-start rounded-full border border-amber-100/18 bg-amber-100/8 px-4 py-2 text-xs uppercase tracking-[0.3em] text-amber-50/88"
             >
-              <span>{selectedIds.length}/3</span>
+              <span>{selectedIds.length}/1</span>
               <div className="flex items-center gap-1.5">
-                {Array.from({ length: 3 }).map((_, index) => (
+                {Array.from({ length: 1 }).map((_, index) => (
                   <span
                     key={`progress-${index}`}
                     className={`h-2 w-2 rounded-full transition ${
@@ -77,8 +77,9 @@ export function CardSelectionScreen({
                   Follow the card that catches your breath.
                 </h2>
                 <p className="max-w-2xl text-sm leading-7 text-slate-200/78 sm:text-base">
-                  Select up to three cards. The river pauses when you hover or
-                  press into it, then resumes its drift as soon as you let go.
+                  Draw one card from the full tarot deck. The river pauses when
+                  you hover or press into it, then resumes its drift as soon as
+                  you let go.
                 </p>
               </div>
 
@@ -102,21 +103,18 @@ export function CardSelectionScreen({
               <div
                 className="flex w-max gap-4 px-4 sm:gap-5 sm:px-8"
                 style={{
-                  animation: "drift-marquee-seamless 38s linear infinite",
+                  animation: "drift-marquee-seamless 76s linear infinite",
                   animationPlayState: isPaused ? "paused" : "running",
                 }}
               >
                 {marqueeCards.map((card, index) => {
                   const isSelected = selectedIds.includes(card.id);
-                  const disableNewSelection =
-                    !isSelected && selectedIds.length >= 3;
 
                   return (
                     <TarotCard
                       key={`${card.id}-${index}`}
                       card={card}
                       selected={isSelected}
-                      disabled={disableNewSelection}
                       onSelect={() => onToggleCard(card.id)}
                     />
                   );
@@ -131,9 +129,9 @@ export function CardSelectionScreen({
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -16 }}
           transition={{ duration: 0.55, delay: 0.12, ease: "easeOut" }}
-          className="grid gap-3 rounded-[1.75rem] border border-white/10 bg-white/5 p-3 backdrop-blur-xl sm:grid-cols-3 sm:gap-4 sm:p-5"
+          className="grid gap-3 rounded-[1.75rem] border border-white/10 bg-white/5 p-3 backdrop-blur-xl sm:p-5"
         >
-          {Array.from({ length: 3 }).map((_, index) => {
+          {Array.from({ length: 1 }).map((_, index) => {
             const card = cards.find((item) => item.id === selectedIds[index]);
 
             return (
@@ -143,7 +141,7 @@ export function CardSelectionScreen({
               >
                 <div className="mb-2 flex items-center justify-between gap-3">
                   <div className="text-[0.65rem] uppercase tracking-[0.3em] text-slate-300/68">
-                    {index + 1}/3
+                    {index + 1}/1
                   </div>
                   <Stars className={`size-4 ${card ? "text-amber-100" : "text-white/25"}`} />
                 </div>
@@ -152,7 +150,7 @@ export function CardSelectionScreen({
                 </div>
                 <p className="mt-2 text-sm leading-6 text-slate-300/72">
                   {card
-                    ? "Chosen and woven into the reading."
+                    ? "Chosen and now unfolding into your reading."
                     : "Pause the motion and follow the card that pulls your attention."}
                 </p>
               </div>

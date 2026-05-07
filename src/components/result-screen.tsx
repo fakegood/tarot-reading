@@ -7,17 +7,19 @@ import { Button } from "@/components/ui/button";
 import type { TarotCardData } from "@/types/tarot";
 
 type ResultScreenProps = {
-  cards: TarotCardData[];
+  card: TarotCardData | null;
   onRetry: () => void;
   onBackToLanding: () => void;
 };
 
 export function ResultScreen({
-  cards,
+  card,
   onRetry,
   onBackToLanding,
 }: ResultScreenProps) {
-  const readingOrder = ["First card", "Second card", "Third card"];
+  if (!card) {
+    return null;
+  }
 
   return (
     <section className="relative min-h-screen overflow-hidden px-4 py-8 sm:px-6 sm:py-10">
@@ -39,16 +41,16 @@ export function ResultScreen({
                 Your reading
               </div>
               <h2 className="font-heading text-4xl leading-none text-white sm:text-5xl lg:text-6xl">
-                Three cards, one quiet constellation.
+                One card, one clear threshold.
               </h2>
               <p className="max-w-3xl text-sm leading-7 text-slate-200/78 sm:text-base">
-                Read them in sequence. The first card opens the door, the second
-                reveals the present current, and the third offers the energy
-                that wants to carry you forward.
+                Let the draw settle before you interpret it too quickly. This
+                single card is meant to concentrate the moment rather than
+                scatter it.
               </p>
               <div className="inline-flex items-center gap-2 rounded-full border border-cyan-100/14 bg-cyan-100/8 px-3 py-2 text-[0.68rem] uppercase tracking-[0.24em] text-cyan-50/82">
                 <Sparkles className="size-3.5" />
-                Drawn from a single three-card spread
+                Drawn from a single-card reading
               </div>
             </div>
 
@@ -82,42 +84,43 @@ export function ResultScreen({
         >
           <div className="rounded-[1.45rem] border border-white/10 bg-[linear-gradient(180deg,_rgba(255,255,255,0.05),_rgba(0,0,0,0.12))] p-5">
             <div className="text-[0.68rem] uppercase tracking-[0.3em] text-slate-300/70">
-              Reading arc
+              Reading focus
             </div>
             <h3 className="mt-3 font-heading text-3xl text-white">
-              Past, present, and next light.
+              The card at the center of the moment.
             </h3>
             <p className="mt-4 text-sm leading-7 text-slate-300/78">
-              Let the cards be read in order. Together they move from the door
-              you just crossed, through the current energy, into the guidance
-              now asking for your trust.
+              Read this draw slowly. Notice what feels immediate, what feels
+              cautionary, and what feels like an invitation into your next step.
             </p>
             <div className="mt-6 space-y-3">
-              {readingOrder.map((label, index) => (
-                <div
-                  key={label}
-                  className="rounded-2xl border border-white/8 bg-black/12 px-4 py-3"
-                >
-                  <div className="text-[0.65rem] uppercase tracking-[0.28em] text-cyan-50/68">
-                    {label}
-                  </div>
-                  <div className="mt-1 font-heading text-2xl text-white">
-                    {cards[index]?.name}
-                  </div>
+              <div className="rounded-2xl border border-white/8 bg-black/12 px-4 py-3">
+                <div className="text-[0.65rem] uppercase tracking-[0.28em] text-cyan-50/68">
+                  Drawn card
                 </div>
-              ))}
+                <div className="mt-1 font-heading text-2xl text-white">
+                  {card.name}
+                </div>
+              </div>
+              <div className="rounded-2xl border border-white/8 bg-black/12 px-4 py-3">
+                <div className="text-[0.65rem] uppercase tracking-[0.28em] text-cyan-50/68">
+                  Arcana
+                </div>
+                <div className="mt-1 font-heading text-2xl text-white">
+                  {card.suit ? `${card.suit} · ${card.arcana}` : card.arcana}
+                </div>
+              </div>
             </div>
           </div>
 
-          <div className="grid gap-6 xl:grid-cols-3">
-          {cards.map((card, index) => (
+          <div className="flex justify-center">
             <motion.div
               key={card.id}
               initial={{ opacity: 0, y: 24 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{
                 duration: 0.6,
-                delay: 0.12 + index * 0.12,
+                delay: 0.12,
                 ease: "easeOut",
               }}
               className="flex justify-center"
@@ -126,11 +129,10 @@ export function ResultScreen({
                 card={card}
                 selected
                 revealMeaning
-                readingLabel={readingOrder[index]}
-                className="w-full max-w-[290px]"
+                readingLabel="Your draw"
+                className="w-full max-w-[320px]"
               />
             </motion.div>
-          ))}
           </div>
         </motion.div>
       </div>
